@@ -11,7 +11,18 @@ gem 'sqlite3'
 gem 'better_errors'
 # better_errorsの画面上にirb/In(PERL)を表示する
 gem 'binding_of_caller'
+#認証機能
 gem "devise", "~> 2.2.2"
+
+#haml
+gem 'haml-rails'
+#html to haml
+gem 'erb2haml'
+#プロジェクトの日本語化
+gem 'i18n_generators'
+#bootstrap 
+gem 'twitter-bootstrap-rails','~>2.2.4'
+gem 'less-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,7 +31,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
