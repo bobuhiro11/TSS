@@ -1,8 +1,26 @@
 .row-fluid
   .span12
-    %h2{"style"=>"background-color : red;"}
-      %center
-        情報．求む
+    %center
+      .carousel.slide#myCarousel
+        .carousel-inner
+          .active.item
+            =image_tag("/img001.png")
+          .item
+            =image_tag("/img002.png")
+          .item
+            =image_tag("/img003.png")
+
+        %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+        %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+
+        :javascript
+          $(document).ready(function(){
+            $('#myCarousel').carousel({
+              interval: 2000,
+              cycle: true
+            });
+          });
+
     %h4
       TSSとは
     %p
@@ -20,3 +38,4 @@
     東北大学
   .span3
     東北大学
+
