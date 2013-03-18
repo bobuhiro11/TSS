@@ -3,4 +3,6 @@ class TransferSupportSystemController < ApplicationController
   end
   def experience_story
   end
+  def about
+  end
 end

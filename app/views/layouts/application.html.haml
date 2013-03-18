@@ -28,8 +28,8 @@
           %a.brand(href="/") TSS
           .container.nav-collapse
             %ul.nav
+              %li= link_to("About",{:controller=>'transfer_support_system',:action=>'about'})
               %li= link_to("編入体験談",{:controller=>'transfer_support_system',:action=>'experience_story'})
-              %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
 
     .container-fluid
