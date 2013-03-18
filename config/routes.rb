@@ -1,4 +1,7 @@
 TSS::Application.routes.draw do
+  root :to=>"transfer_support_system#index"
+  get "transfer_support_system/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
