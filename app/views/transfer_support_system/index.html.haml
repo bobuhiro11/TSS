@@ -1,32 +1,28 @@
 .row-fluid
-  .span12
-    %center
-      .carousel.slide#myCarousel
-        .carousel-inner
-          .active.item
-            =image_tag("/img001.png")
-          .item
-            =image_tag("/img002.png")
-          .item
-            =image_tag("/img003.png")
+  %h2
+    高専生が求める編入体験談がここに集結!!
+.row-fluid
+  %center
+    .carousel.slide#myCarousel
+      .carousel-inner
+        .active.item
+          =image_tag("/img001.png")
+        .item
+          =image_tag("/img002.png")
+        .item
+          =image_tag("/img003.png")
 
-        %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
-        %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+      %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+      %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
 
-        :javascript
-          $(document).ready(function(){
-            $('#myCarousel').carousel({
-              interval: 2000,
-              cycle: true
-            });
+      :javascript
+        $(document).ready(function(){
+          $('#myCarousel').carousel({
+            interval: 2000,
+            cycle: true
           });
+        });
 
-    %center
-      %h4
-        TSSとは
-      %p
-        このサイトはは大学編入体験談を閲覧、投稿するサイトです
-        高専生は是非使おうぜ
 .row-fluid
   .span6
     %h4
