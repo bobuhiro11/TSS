@@ -1,0 +1,26 @@
+ja:
+  activerecord:
+    models:
+      story: 体験談  #g
+
+    attributes:
+      story:
+        apply_kind: 受験方法  #g
+        apply_result: 受験結果  #g
+        apply_year: 受験年度  #g
+        exam_content: 試験内容  #g
+        exam_subject: 試験科目  #g
+        facebook: Facebook  #g
+        interview: 面接  #g
+        mail_address: メールアドレス  #g
+        nct_department: 高専在学時の学科  #g
+        nct_name: 出身高専  #g
+        nct_rank: 在学時での最高の席次  #g
+        school_department: 学部名  #g
+        school_name: 学校名  #g
+        school_subject: 学科名  #g
+        study_aid: 使用した参考書  #g
+        sub_school_name: 併願校  #g
+        twitter: twitter  #g
+        your_motive: 志望の動機  #g
+        your_profile: 自己紹介  #g

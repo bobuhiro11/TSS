@@ -1,0 +1,55 @@
+%h1 Listing stories
+
+%table
+  %tr
+    %th School name
+    %th School department
+    %th School subject
+    %th Apply kind
+    %th Apply result
+    %th Apply year
+    %th Sub school name
+    %th Nct name
+    %th Nct department
+    %th Nct rank
+    %th Your profile
+    %th Your motive
+    %th Exam subject
+    %th Exam content
+    %th Interview
+    %th Study aid
+    %th Twitter
+    %th Facebook
+    %th Mail address
+    %th
+    %th
+    %th
+
+  - @stories.each do |story|
+    %tr
+      %td= story.school_name
+      %td= story.school_department
+      %td= story.school_subject
+      %td= story.apply_kind
+      %td= story.apply_result
+      %td= story.apply_year
+      %td= story.sub_school_name
+      %td= story.nct_name
+      %td= story.nct_department
+      %td= story.nct_rank
+      %td= story.your_profile
+      %td= story.your_motive
+      %td= story.exam_subject
+      %td= story.exam_content
+      %td= story.interview
+      %td= story.study_aid
+      %td= story.twitter
+      %td= story.facebook
+      %td= story.mail_address
+      %td= link_to 'Show', story
+      %td= link_to 'Edit', edit_story_path(story)
+      %td= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Story', new_story_path

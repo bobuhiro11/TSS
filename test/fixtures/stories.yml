@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  school_name: MyString
+  school_department: MyString
+  school_subject: MyString
+  apply_kind: MyString
+  apply_result: MyString
+  apply_year: MyString
+  sub_school_name: MyString
+  nct_name: MyString
+  nct_department: MyString
+  nct_rank: MyString
+  your_profile: MyText
+  your_motive: MyText
+  exam_subject: MyString
+  exam_content: MyString
+  interview: MyText
+  study_aid: MyText
+  twitter: MyString
+  facebook: MyString
+  mail_address: MyString
+
+two:
+  school_name: MyString
+  school_department: MyString
+  school_subject: MyString
+  apply_kind: MyString
+  apply_result: MyString
+  apply_year: MyString
+  sub_school_name: MyString
+  nct_name: MyString
+  nct_department: MyString
+  nct_rank: MyString
+  your_profile: MyText
+  your_motive: MyText
+  exam_subject: MyString
+  exam_content: MyString
+  interview: MyText
+  study_aid: MyText
+  twitter: MyString
+  facebook: MyString
+  mail_address: MyString

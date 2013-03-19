@@ -1,4 +1,7 @@
 TSS::Application.routes.draw do
+  resources :stories
+
+
   root :to=>"transfer_support_system#index"
   get "transfer_support_system/index"
   get "transfer_support_system/experience_story"
