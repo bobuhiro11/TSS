@@ -1,5 +1,9 @@
 TSS::Application.routes.draw do
+ 
   root :to=>"transfer_support_system#index"
+  
+  devise_for :users
+  get 'transfer_support_system', :to =>'transfer_support_system#experience_story', :as=> :user_root
   get "transfer_support_system/index"
   get "transfer_support_system/experience_story"
   get "transfer_support_system/about"

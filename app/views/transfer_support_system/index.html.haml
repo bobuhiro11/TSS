@@ -1,32 +1,28 @@
 .row-fluid
-  .span12
+  %h2
     %center
-      .carousel.slide#myCarousel
-        .carousel-inner
-          .active.item
-            =image_tag("/img001.png")
-          .item
-            =image_tag("/img002.png")
-          .item
-            =image_tag("/img003.png")
+      高専生が求めていた編入体験談がいまここに
+.row-fluid
+  %center
+    .carousel.slide#myCarousel
+      .carousel-inner
+        .active.item
+          =image_tag("/img001.png")
+        .item
+          =image_tag("/img002.png")
+        .item
+          =image_tag("/img003.png")
 
-        %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
-        %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+      %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+      %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
 
-        :javascript
-          $(document).ready(function(){
-            $('#myCarousel').carousel({
-              interval: 2000,
-              cycle: true
-            });
+      :javascript
+        $(document).ready(function(){
+          $('#myCarousel').carousel({
+            interval: 2000,
+            cycle: true
           });
-
-    %center
-      %h4
-        TSSとは
-      %p
-        このサイトはは大学編入体験談を閲覧、投稿するサイトです
-        高専生は是非使おうぜ
+        });
 .row-fluid
   .span6
     %h4
@@ -52,10 +48,10 @@
           %td
             2013/3/2
           %td
-            大学を追加
+            大学を追加 
   .span6
     %h4
-      掲載されている大学
+      掲載されている主な大学
     %ul
       %li
         東京大学
@@ -71,3 +67,13 @@
         東京大学
       %li
         東京大学
+.row-fluid
+  .span6
+    %h4
+      アカウント登録して体験談を投稿しよう
+    = link_to 'アカウント登録', [ :new, :user_registration ]
+  .span6
+    %h4
+      既にアカウントをお持ちの方
+    %br
+    =link_to'ログイン',[:new,:user_session]
