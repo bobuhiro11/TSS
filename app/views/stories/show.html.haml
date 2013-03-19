@@ -1,63 +1,87 @@
-%p#notice= notice
+.row-fluid
+  .span6.offset3
+    %p#notice= notice
 
-%p
-  %b School name:
-  = @story.school_name
-%p
-  %b School department:
-  = @story.school_department
-%p
-  %b School subject:
-  = @story.school_subject
-%p
-  %b Apply kind:
-  = @story.apply_kind
-%p
-  %b Apply result:
-  = @story.apply_result
-%p
-  %b Apply year:
-  = @story.apply_year
-%p
-  %b Sub school name:
-  = @story.sub_school_name
-%p
-  %b Nct name:
-  = @story.nct_name
-%p
-  %b Nct department:
-  = @story.nct_department
-%p
-  %b Nct rank:
-  = @story.nct_rank
-%p
-  %b Your profile:
-  = @story.your_profile
-%p
-  %b Your motive:
-  = @story.your_motive
-%p
-  %b Exam subject:
-  = @story.exam_subject
-%p
-  %b Exam content:
-  = @story.exam_content
-%p
-  %b Interview:
-  = @story.interview
-%p
-  %b Study aid:
-  = @story.study_aid
-%p
-  %b Twitter:
-  = @story.twitter
-%p
-  %b Facebook:
-  = @story.facebook
-%p
-  %b Mail address:
-  = @story.mail_address
+    %table.table
+      %tbody
+        %tr
+          %td
+            受験大学
+          %td
+            = @story.school_name
+            = @story.school_department
+            = @story.school_subject
+        %tr
+          %td
+            受験方法
+          %td
+            = @story.apply_kind
+        %tr
+          %td
+            合否
+          %td
+            = @story.apply_result
+        %tr
+          %td
+            年度
+          %td
+            = @story.apply_year
+        %tr
+          %td
+            併願校
+          %td
+            = @story.sub_school_name
+        %tr
+          %td
+            出身校
+          %td
+            = @story.nct_name
+            = @story.nct_department
+        %tr
+          %td
+            最高順位
+          %td
+            = @story.nct_rank
+    %p
+      %h4 
+        自己紹介
+      %blockquote
+        = @story.your_profile
+    %p
+      %h4 
+        動機
+      %blockquote
+        = @story.your_motive
+    %p
+      %h4 
+        試験科目
+      %blockquote
+        = @story.exam_subject
+    %p
+      %h4 試験
+      %blockquote
+        = @story.exam_content
+    %p
+      %h4 面接
+      %blockquote
+        = @story.interview
+    %p
+      %h4 参考書
+      %blockquote
+        = @story.study_aid
+    %p
+      %h4 Twitter
+      %blockquote
+        = @story.twitter
+    %p
+      %h4 Facebook
+      %blockquote
+        = @story.facebook
+    %p
+      %h4 Mail address
+      %blockquote
+        = @story.mail_address
 
-= link_to 'Edit', edit_story_path(@story)
-\|
-= link_to 'Back', stories_path
+    = link_to 'Edit', edit_story_path(@story)
+    \|
+    = link_to 'Back', stories_path
