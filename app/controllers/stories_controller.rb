@@ -1,3 +1,4 @@
+# coding: utf-8
 class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
@@ -44,7 +45,7 @@ class StoriesController < ApplicationController
 
     respond_to do |format|
       if @story.save
-        format.html { redirect_to @story, notice: 'Story was successfully created.' }
+        format.html { redirect_to @story, notice: '体験談は無事に投稿されました。' }
         format.json { render json: @story, status: :created, location: @story }
       else
         format.html { render action: "new" }
