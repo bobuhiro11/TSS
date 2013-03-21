@@ -14,7 +14,7 @@ class CreateStories < ActiveRecord::Migration
       t.text :your_profile
       t.text :your_motive
       t.string :exam_subject
-      t.string :exam_content
+      t.text :exam_content
       t.text :interview
       t.text :study_aid
       t.string :twitter

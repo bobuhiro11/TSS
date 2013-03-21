@@ -6,22 +6,21 @@
         - @story.errors.full_messages.each do |msg|
           %li= msg
   =field_set_tag'受験大学'do
-    .table.table-striped.table-bordered.table-condensed
-      %table
-        %tr{:align => "center"}
-          %th
-            = f.label :school_name
-          %th
-            = f.label :school_department
-          %th
-            = f.label :school_subject
-        %tr
-          %th
-            = f.text_field :school_name,:placeholder=>"ABC大学"
-          %th
-            = f.text_field :school_department,:placeholder=>"ABC学部"
-          %th
-            = f.text_field :school_subject,:placeholder=>"ABC学科"
+    .row-fulid
+      .span3    
+        = f.label :school_name
+      .span9
+        = f.text_field :school_name,:placeholder=>"ABC大学"
+    .row-fluid
+      .span3
+        = f.label :school_department
+      .span9
+        = f.text_field :school_department,:placeholder=>"ABC学部"
+    .row-fluid
+      .span3
+        = f.label :school_subject
+      .span9
+        = f.text_field :school_subject,:placeholder=>"ABC学科"
     .row-fluid
       .span4
         = f.label :apply_kind
@@ -80,7 +79,7 @@
       .span3
         = f.label :exam_content
       .span9
-        = f.text_field :exam_content
+        = f.text_area :exam_content
     .row-fluid
       .span3
         = f.label :interview
