@@ -12,7 +12,7 @@ gem 'better_errors'
 # better_errorsの画面上にirb/In(PERL)を表示する
 gem 'binding_of_caller'
 #認証機能
-gem "devise", "~> 2.2.2"
+#gem "devise", "~> 2.2.2"
 
 #haml
 gem 'haml-rails'
