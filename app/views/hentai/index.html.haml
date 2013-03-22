@@ -1,6 +1,6 @@
 %h2
   %center
-    高専生が求める編入体験談がこのサイトで見れる!!
+    高専生が求めていた編入体験談が集まるサイト!!
 .row-fluid
   %center
     .carousel.slide#myCarousel
@@ -20,16 +20,13 @@
           cycle: true
         });
       });
-
 .row-fluid
   .span6
     %h4
       更新情報
   .span6
     %h4
-      掲載されている大学
-    %ul
-      %li
-        東京大学
-      %li
-        東京大学l
+      掲載されている主な大学
+      %ul.nav.nav-list
+        %li= link_to'東京大学',
+        %li= link_to'京都大学',

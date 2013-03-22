@@ -1,9 +1,13 @@
 TSS::Application.routes.draw do
-
-  resources :stories
-
-
+  
   root :to=>"hentai#index"
+
+  resources :stories do
+    collection do
+      post :search
+    end
+  end
+  
   get "hentai/index"
   get "hentai/about"
   # The priority is based upon order of creation:

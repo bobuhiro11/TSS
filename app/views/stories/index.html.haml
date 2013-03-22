@@ -1,14 +1,25 @@
 .row-fluid
   .span6
+    %h3
+      編入受験が終わったら
+    %h4
+      .btn.btn-large
+        = link_to sanitize('<i class="icon-pencil icon-white"></i> ') + '体験談を投稿する',new_story_path
+  .span6
+    %h3 
+      体験談を検索する
+      =form_tag :action =>'search' do
+        =label_tag 'school_name','大学名'
+        .form-search
+          =text_field_tag 'school_name'
+        %input.btn{alt: "検索する", value: "検索する", type: "submit"}
+
+.row-fluid
+  .span6
     %h3 主要大学一覧
     %ul.nav.nav-list
       %li
-        = link_to sanitize('<i class="icon-home"></i> ') + '東京大学','/'
+        = link_to sanitize('<i class="icon-file"></i> ') + '東京大学','/'
       %li
-        = link_to sanitize('<i class="icon-home"></i> ') + '大阪大学','/'
+        = link_to sanitize('<i class="icon-file"></i> ') + '大阪大学','/'
   .span6
-    %h3
-      編入受験が終わった人は?
-
-    %h4
-      = link_to '編入体験談を投稿する', new_story_path

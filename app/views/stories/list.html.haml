@@ -1,0 +1,30 @@
+%h3 
+  大学名:
+  =@msg
+  の検索結果
+%table
+  %tr
+    %th 学部
+    %th 学科
+    %th 受験方法
+    %th 受験年度
+    %th Twitter
+    %th Facebook
+    %th メールアドレス
+    %th
+    %th
+    %th
+  - @stories.each do |story|
+    %tr
+      %td= story.school_department
+      %td= story.school_subject
+      %td= story.apply_result
+      %td= story.apply_year
+      %td= story.twitter
+      %td= story.facebook
+      %td= story.mail_address
+      %td= link_to '詳細を見る', story
+      %td= link_to '編集', edit_story_path(story)
+      %td= link_to '削除', story, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br

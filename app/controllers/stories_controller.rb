@@ -11,6 +11,11 @@ class StoriesController < ApplicationController
     end
   end
 
+  def search
+    @stories = Story.where(:school_name => params[:school_name])
+    @msg = params[:school_name]
+    render'stories/list'
+  end
   # GET /stories/1
   # GET /stories/1.json
   def show

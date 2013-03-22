@@ -1,7 +1,7 @@
 = form_for @story do |f|
   - if @story.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@story.errors.count, "error")} prohibited this story from being saved:"
+      %h2= "#{pluralize(@story.errors.count, "")} 個の入力ミスがあります。"
       %ul
         - @story.errors.full_messages.each do |msg|
           %li= msg
@@ -11,6 +11,12 @@
         = f.label :school_name
       .span9
         = f.text_field :school_name,:placeholder=>"ABC大学"
+    .row-fluid
+      .span6
+        - msg='学校名称は省略せずに正式な名称を入力して下さい'
+        = highlight(msg,'正式な名称')
+      .span6
+        例)東大→東京大学,東工大→東京工業大学
     .row-fluid
       .span3
         = f.label :school_department
