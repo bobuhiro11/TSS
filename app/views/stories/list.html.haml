@@ -9,7 +9,6 @@
     %th 受験年度
     %th Twitter
     %th Facebook
-    %th メールアドレス
     %th
     %th
     %th
@@ -21,9 +20,8 @@
       %td= story.apply_year
       %td= story.twitter
       %td= story.facebook
-      %td= story.mail_address
-      %td= link_to '詳細を見る', story
-      %td= link_to '編集', edit_story_path(story)
-      %td= link_to '削除', story, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to '詳細を見る', story,class:"btn btn-info"
+      %td= link_to '編集する', edit_story_path(story),class:"btn btn-primary"
+      %td= link_to '削除する', story, method: :delete, data: { confirm: '本当に削除しますか?' },class:"btn btn-danger"
 
 %br

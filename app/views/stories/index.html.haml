@@ -2,16 +2,15 @@
   .span6
     %h3
       編入受験が終わったら
-    %h4
-      .btn.btn-large
-        = link_to sanitize('<i class="icon-pencil icon-white"></i> ') + '体験談を投稿する',new_story_path
+    .btn.btn-large
+      =link_to sanitize('<i class="icon-pencil icon-white"> </i>') + '体験談を投稿する',new_story_path,class:"btn btn-primary"
   .span6
     %h3 
       体験談を検索する
       =form_tag :action =>'search' do
         =label_tag 'school_name','大学名'
         .form-search
-          =text_field_tag 'school_name'
+          =text_field_tag 'school_name',
         %input.btn{alt: "検索する", value: "検索する", type: "submit"}
 
 .row-fluid
