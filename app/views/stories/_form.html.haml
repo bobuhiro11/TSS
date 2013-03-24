@@ -7,9 +7,9 @@
           %li= msg
   =field_set_tag'受験大学'do
     .row-fulid
-      .span3    
+      .span6    
         = f.label :school_name
-      .span9
+      .span6
         = f.text_field :school_name,:placeholder=>"ABC大学"
     .row-fluid
       .span6
@@ -51,65 +51,71 @@
     = f.text_field :sub_school_name,:placeholder=>"ABC大学:合格 XYZ大学:不合格"
   =field_set_tag'Plofile'do
     .row-fluid
-      .span3
+      .span6
         = f.label :nct_name
-      .span9
+      .span6
         = f.select(:nct_name,['函館高専','苫小牧高専','釧路高専','旭川高専','八戸高専','一関高専','仙台高専広瀬キャンパス','仙台高専名取キャンパス','秋田高専','鶴岡高専','福島高専','茨城高専','小山高専','群馬高専','木更津高専','東京高専','東京都立産業技術高専','サレジオ高専','長岡高専','長野高専','富山高専射水キャンパス','富山高専本郷キャンパス','石川高専','金沢高専','福井高専','岐阜高専','沼津高専','豊田高専','鳥羽商船','鈴鹿高専','舞鶴高専','明石高専','奈良高専','和歌山高専','近畿大学高専','神戸市立高専','大阪府立高専','米子高専','松江高専','津山高専','広島商船','呉高専','徳山高専','宇部高専','大島商船','阿南高専','香川高専詫間キャンパス','香川高専高松キャンパス','新居浜高専','弓削商船','高知高専','久留米高専','有明高専','北九州高専','佐世保高専','熊本高専熊本キャンパス','熊本高専八代キャンパス','大分高専','都城高専','鹿児島高専','沖縄高専'],{:include_blank=>"選択して下さい"},{:class=>'pub'})
     .row-fluid
-      .span3
+      .span6
         = f.label :nct_department
-      .span9
+      .span6
         = f.select(:nct_department,['機械系','電子系','情報系','土木系','建築系','デザイン系','通信系','制御系','化学系'],{:include_blank=>"選択して下さい"},{:class=>'pub'})
     .row-fluid
-      .span3
+      .span6
         = f.label :nct_rank
-      .span9
+      .span6
         = f.select(:nct_rank,['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50'],{:include_blank=>"選択して下さい"},{:class=>'pub'})
     .row-fluid
-      .span3
+      .span6
         = f.label :your_profile
-      .span9
+      .span6
         = f.text_area :your_profile,:placeholder=>"プロコンやロボコンに参加していた等、お好きな事をどうぞ"
     .row-fluid
-      .span3
+      .span6
         = f.label :your_motive
-      .span9
+      .span6
         = f.text_area :your_motive,:placeholder=>"受験した理由"
   =field_set_tag'試験情報'do
     .row-fluid
-      .span3
+      .span6
         = f.label :exam_subject
-      .span9
+      .span6
         = f.text_field :exam_subject
     .row-fluid
-      .span3
+      .span6
         = f.label :exam_content
-      .span9
+      .span6
         = f.text_area :exam_content
     .row-fluid
-      .span3
+      .span6
         = f.label :interview
-      .span9
+      .span6
         = f.text_area :interview
     .row-fluid
-      .span3
+      .span6
         = f.label :study_aid
-      .span9
+      .span6
         = f.text_area :study_aid
   =field_set_tag'Contact'do
     .row-fluid
-      .span3
+      .span6
         = f.label :twitter
-      .span9
+      .span6
         = f.text_field :twitter,:placeholder=>"@twitter"
     .row-fluid
       .span3
         = f.label :facebook
       .span9
-        = f.text_field :facebook,:placeholder=>"https://www.facebook.com/your_screen_name"
     .row-fluid
-      .span3
+      .span6
+        https://www.facebook.com/
+      .span6
+        = f.url_field :facebook,:placeholder=>"your_screen_name"
+    .row-fluid
+      .span6
         = f.label :mail_address
-      .span9
+      .span6
         = f.text_field :mail_address,:placeholder=>"kosenaあっとnct.com"
-    = f.submit 'Save'
+    %button.btn.btn-primary{:type => "submit"}
+      %i.icon-check.icon-white
+        投稿する
