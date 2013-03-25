@@ -29,14 +29,7 @@
     %h4
       掲載されている主な大学
       %ul.nav.nav-list
-        %li= link_to'東京大学',{:controller=>"stories" ,:action=>"search",:school_name=>"東京大学"},{:method=>"post"}
-        %li= link_to'京都大学',{:controller=>"stories" ,:action=>"search",:school_name=>"京都大学"},{:method=>"post"}
-        %li= link_to'東方大学',{:controller=>"stories" ,:action=>"search",:school_name=>"東北大学"},{:method=>"post"}
-        %li= link_to'九州大学',{:controller=>"stories" ,:action=>"search",:school_name=>"九州大学"},{:method=>"post"}
-        %li= link_to'北海道大学',{:controller=>"stories" ,:action=>"search",:school_name=>"北海道大学"},{:method=>"post"}
-        %li= link_to'大阪大学',{:controller=>"stories" ,:action=>"search",:school_name=>"大阪大学"},{:method=>"post"}
-        %li= link_to'名古屋大学',{:controller=>"stories" ,:action=>"search",:school_name=>"名古屋大学"},{:method=>"post"}
-        %li= link_to'東京工業大学',{:controller=>"stories" ,:action=>"search",:school_name=>"東京工業大学"},{:method=>"post"}
-        %li= link_to'神戸大学',{:controller=>"stories" ,:action=>"search",:school_name=>"神戸大学"},{:method=>"post"}
-        %li= link_to'筑波大学',{:controller=>"stories" ,:action=>"search",:school_name=>"筑波大学大学"},{:method=>"post"}
-        %li= link_to'京都工芸繊維大学',{:controller=>"stories" ,:action=>"search",:school_name=>"京都工芸繊維大学"},{:method=>"post"}
+        - @schools.each{ |s| 
+        %li
+          = link_to s.school_name+"("+s.count.to_s+"件)",{:controller=>"stories" ,:action=>"search",:school_name=>s.school_name},{:method=>"post"}
+        - }
