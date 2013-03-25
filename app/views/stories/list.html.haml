@@ -1,12 +1,16 @@
 %h3 
   =@msg
   の検索結果
-%table
-  %tr
-    %th 学部
-    %th 学科
-    %th 受験方法
-    %th 受験年度
+%table.table
+  %tr{:style=>"background-color : #ccc"}
+    %th
+      = link_to'学部',{:controller=>"stories" ,:action=>"search",:school_name=>@msg ,:order=>"school_department"},{:method=>"post"}
+    %th
+      = link_to'学科',{:controller=>"stories" ,:action=>"search",:school_name=>@msg ,:order=>"school_subject"},{:method=>"post"}
+    %th
+      = link_to'受験方法',{:controller=>"stories" ,:action=>"search",:school_name=>@msg ,:order=>"apply_kind"},{:method=>"post"}
+    %th 
+      = link_to'受験年度',{:controller=>"stories" ,:action=>"search",:school_name=>@msg ,:order=>"apply_year"},{:method=>"post"}
     %th Twitter
     %th Facebook
     %th
@@ -16,7 +20,7 @@
     %tr
       %td= story.school_department
       %td= story.school_subject
-      %td= story.apply_result
+      %td= story.apply_kind
       %td= story.apply_year
       %td= story.twitter
       %td= story.facebook

@@ -13,6 +13,9 @@ class StoriesController < ApplicationController
 
   def search
     @stories = Story.where(:school_name => params[:school_name])
+    if params[:order]
+      @stories = @stories.order(params[:order]+" desc")
+    end
     @msg = params[:school_name]
     render'stories/list'
   end
