@@ -83,6 +83,6 @@
       %blockquote
         = @story.mail_address
 
-    = link_to'編集する, edit_story_path(@story),class:"btn btn-info"
+    = link_to '編集する', edit_story_path(@story),:class=>'btn btn-info'
     \|
-    = link_to 'Topへ戻る', stories_path,class:"btn btn-inverse"
+    = link_to 'Topへ戻る', stories_path,:class=>"btn btn-inverse"
