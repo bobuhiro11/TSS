@@ -7,10 +7,9 @@
   .span6
     %h3 
       体験談を検索する
-      =form_tag :action =>'search' do
+      =form_tag({:action =>'search'},{:class=>"form-search"}) do
         =label_tag 'school_name','大学名'
-        .form-search
-          =text_field_tag 'school_name',
+        =text_field_tag 'school_name',nil,:class=>'input-medium search-query'
         %input.btn{alt: "検索する", value: "検索する", type: "submit"}
 
 .row-fluid
